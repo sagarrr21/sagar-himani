@@ -1,108 +1,271 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#1b0b0d">
-<title>Sagar ❤️ Himani — Forever</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090707">
+
+  <title>Private · Sagar & Himani</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+
+      background:
+        radial-gradient(
+          circle at 50% 35%,
+          #29181b 0%,
+          #110b0c 45%,
+          #050505 100%
+        );
+
+      color: #f8eeee;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .card {
+      width: min(440px, 100%);
+      padding: 48px 34px;
+      text-align: center;
+
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+
+      background: rgba(255, 255, 255, 0.045);
+
+      box-shadow:
+        0 24px 80px rgba(0, 0, 0, 0.5);
+
+      backdrop-filter: blur(12px);
+    }
+
+    .heart {
+      font-size: 38px;
+      margin-bottom: 18px;
+      color: #e6a3ac;
+    }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: #c8aeb1;
+    }
+
+    .title {
+      font-size: 42px;
+      font-weight: 400;
+      margin: 14px 0 10px;
+    }
+
+    .subtitle {
+      color: #bcaeb0;
+      line-height: 1.7;
+      margin: 0 0 30px;
+    }
+
+    .password-box {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px 16px;
+
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+
+      background: rgba(0, 0, 0, 0.3);
+
+      color: white;
+      font-size: 16px;
+
+      outline: none;
+    }
+
+    input::placeholder {
+      color: #817578;
+    }
+
+    input:focus {
+      border-color: #c98b94;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 12px;
+      padding: 15px;
+
+      border: 0;
+      border-radius: 12px;
+
+      background: #f1d6d9;
+      color: #241416;
+
+      font-weight: 700;
+      font-size: 15px;
+
+      cursor: pointer;
+
+      transition: 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.05);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    #error {
+      min-height: 20px;
+      margin-top: 12px;
+
+      color: #e9a2aa;
+
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    .note {
+      margin-top: 28px;
+
+      color: #766a6c;
+
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    .lock {
+      margin-top: 24px;
+      font-size: 12px;
+      color: #665b5d;
+      font-family: Arial, sans-serif;
+    }
+  </style>
 </head>
+
 <body>
-<div class="loader"><div class="loaderHeart">♥</div><p>Loading our story...</p></div>
-<div class="ambient"></div>
-<button class="music" id="musicBtn" aria-label="Toggle ambient music">♪ <span>Music</span></button>
-<div class="progress"><span id="progressBar"></span></div>
 
-<header><b>S <span>♥</span> H</b><small>OUR STORY · 4.5 YEARS</small></header>
+  <main class="card">
 
-<section class="hero reveal">
-  <img src="memory-2.jpeg" alt="Sagar and Himani">
-  <div class="shade"></div><div class="sparkles"></div>
-  <div class="heroText">
-    <small>A LITTLE WEBSITE ABOUT US</small>
-    <h1>Our story began<br><i>randomly.</i></h1>
-    <p>And somehow, that random meeting became my favorite part of life.</p>
-    <button class="start" onclick="scrollToId('story')">Begin our story <span>↓</span></button>
-    <div class="scrollHint">SCROLL TO DISCOVER</div>
-  </div>
-</section>
+    <div class="heart">♥</div>
 
-<section id="story" class="section reveal">
-  <div class="copy">
-    <small>01 · THE BEGINNING</small>
-    <h2>It started with a<br><i>random class.</i></h2>
-    <p>We met randomly in classes. There was no grand plan, no idea that this moment would become the beginning of something so important. It was just two people meeting — and then, somehow, we became <b>us.</b></p>
-    <blockquote>“The best things in life are sometimes the things we never planned.”</blockquote>
-  </div>
-  <figure class="tilt"><img src="memory-1.jpeg" alt="Early memory"><figcaption>Where our story quietly began ❤️</figcaption></figure>
-</section>
+    <div class="eyebrow">
+      A PRIVATE LITTLE PLACE
+    </div>
 
-<section class="years reveal">
-  <small>4.5 YEARS OF US</small>
-  <div class="counter" data-target="4.5">0</div><label>YEARS</label>
-  <div class="stats"><span><b>∞</b> memories</span><span><b>1</b> beautiful story</span><span><b>2</b> people, one team</span></div>
-  <em>And I would happily relive every chapter if it meant finding you again.</em>
-</section>
+    <h1 class="title">
+      Sagar & Himani
+    </h1>
 
-<section class="section gallerySection reveal">
-  <div class="copy">
-    <small>02 · THE LITTLE MOMENTS</small>
-    <h2>Some memories<br><i>feel like home.</i></h2>
-    <p>Not every favorite memory needs a special occasion. Sometimes it is a photo, a look, a laugh, a random day, or simply being next to you.</p>
-    <button class="galleryHint" onclick="openGallery()">Tap a memory to make it bigger ↗</button>
-  </div>
-  <div class="gallery">
-    <figure class="memory" onclick="openGallery(0)"><img src="memory-3.jpeg" alt="Memory"><figcaption>Just us. ❤️</figcaption></figure>
-    <figure class="memory" onclick="openGallery(1)"><img src="memory-4.jpeg" alt="Memory"><figcaption>My favorite kind of chaos.</figcaption></figure>
-    <figure class="memory" onclick="openGallery(2)"><img src="memory-5.jpeg" alt="Memory"><figcaption>A moment worth keeping forever.</figcaption></figure>
-  </div>
-</section>
+    <p class="subtitle">
+      Some stories are meant to be shared only
+      with the people who matter.
+    </p>
 
-<section class="journey reveal">
-  <div class="journeyImg"><img src="memory-2.jpeg" alt="Sagar and Himani"></div>
-  <div class="journeyCopy">
-    <small>03 · ONE OF MY FAVORITE ADVENTURES</small>
-    <h2>Us, a bike,<br><i>and the road ahead.</i></h2>
-    <b class="location">🏍️ STATUE OF UNITY</b>
-    <p>One of my favorite memories is going out on the bike to the Statue of Unity. The destination was beautiful, but what I remember most is being there with you — riding together, talking, laughing, and making another memory that belongs only to us.</p>
-    <p class="script">I hope this is just one of the many adventures still waiting for us.</p>
-  </div>
-</section>
+    <form id="gate" class="password-box">
 
-<section class="letter reveal">
-  <small>04 · A LETTER FOR YOU</small>
-  <h2>Himani,</h2>
-  <div class="letterBody">
-    <p>Four and a half years ago, I had no idea that a random meeting in class would lead me here — writing this for the person I want beside me for the rest of my life.</p>
-    <p>You've become part of my happiest memories, my everyday thoughts, my adventures, my laughter, and even the little moments that probably seemed ordinary at the time. Somehow, with you, ordinary moments became the ones I remember most.</p>
-    <p>I love the life we've created in these 4.5 years, but what makes me even more excited is everything we haven't experienced yet. More rides. More trips. More stupid jokes. More photographs. More celebrations. More quiet evenings. More of us.</p>
-    <p>I can't promise that every day will be perfect. But I can promise that I want to be there for the imperfect days too — to grow with you, laugh with you, support you, annoy you a little, and keep choosing you.</p>
-    <strong>I don't just want another chapter with you.<br>I want the whole book. ❤️</strong>
-    <p class="sign">Forever yours,<br><b>Sagar</b></p>
-  </div>
-</section>
+      <input
+        id="password"
+        type="password"
+        placeholder="Enter password"
+        autocomplete="off"
+        required
+      >
 
-<section class="pause reveal"><div><small>AFTER EVERYTHING WE'VE SHARED...</small><h2>There is one question<br><i>left.</i></h2><button onclick="scrollToId('proposal')">Continue ↓</button></div></section>
+      <button type="submit">
+        Unlock Our Story
+      </button>
 
-<section id="proposal" class="proposal">
-  <div class="proposalInner">
-    <div class="ring">💍</div><small>THE MOMENT</small>
-    <h2>Himani, will you<br><i>marry me?</i></h2>
-    <p>After 4.5 years, I have one very important question.</p>
-    <div id="buttons"><button id="yes">YES, I WILL ❤️</button><button id="no">NO 😏</button></div>
-    <span id="msg"></span>
-  </div>
-</section>
+    </form>
 
-<section id="yesScreen">
-  <div class="celebrate"><div class="yesHeart">❤️</div><small>SHE SAID YES!</small><h2>Our next chapter<br><i>starts here.</i></h2><h3>Sagar ❤️ Himani</h3><p>Here's to every road we haven't taken, every memory we haven't made, and every version of us that is still waiting to be discovered.</p><img src="memory-5.jpeg" alt="Sagar and Himani"><div class="forever">Our story isn't ending here.<br><span>It's just getting started. ❤️</span></div></div>
-</section>
+    <div id="error"></div>
 
-<div class="lightbox" id="lightbox"><button onclick="closeGallery()">×</button><img id="lightboxImg" alt="Memory"><p id="lightboxCaption"></p></div>
-<footer>Made with love by Sagar, for Himani. ❤️</footer>
-<script src="script.js"></script>
+    <div class="note">
+      OUR STORY · PRIVATE ACCESS
+    </div>
+
+    <div class="lock">
+      🔒 This little place is just for us.
+    </div>
+
+  </main>
+
+  <script>
+
+    /*
+      ==============================
+      YOUR WEBSITE PASSWORD
+      ==============================
+    */
+
+    const PASSWORD = "SH1690";
+
+
+    /*
+      ==============================
+      CHECK PASSWORD
+      ==============================
+    */
+
+    document
+      .getElementById("gate")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const enteredPassword =
+          document.getElementById("password").value;
+
+        const error =
+          document.getElementById("error");
+
+
+        if (enteredPassword === PASSWORD) {
+
+          // Remember that this browser has unlocked the story.
+          sessionStorage.setItem(
+            "storyUnlocked",
+            "yes"
+          );
+
+          // Open the actual Sagar & Himani website.
+          window.location.href = "story.html";
+
+        } else {
+
+          error.textContent =
+            "That password is not correct. Try again.";
+
+          document.getElementById("password").value = "";
+
+          document
+            .getElementById("password")
+            .focus();
+        }
+
+      });
+
+  </script>
+
 </body>
 </html>
