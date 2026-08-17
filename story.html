@@ -104,6 +104,13 @@
 <div class="lightbox" id="lightbox"><button onclick="closeGallery()">×</button><img id="lightboxImg" alt="Memory"><p id="lightboxCaption"></p></div>
 <footer>Made with love by Sagar, for Himani. ❤️</footer>
 <script src="script.js"></script>
+
+<script>
+if (sessionStorage.getItem("storyUnlocked") !== "yes") {
+  window.location.replace("index.html");
+}
+</script>
+
 </body>
 </html>
 
